@@ -23,10 +23,18 @@ int main() {
 
     s_ptr=&r;
     s_ptr->speak();
-    vector<Shape*>Shapes={
+    vector<Shape*>shapes={
         new Shape(),
         new Rectangle(22),
+        new Triangle(),
     };
-
+    int choice;
+    cin>>choice;
+    switch(choice) {
+        case 1:
+            shapes.push_back(new Shape());
+        case 2:
+            shapes.push_back(new Triangle());
+    }
     return 0;
 }
