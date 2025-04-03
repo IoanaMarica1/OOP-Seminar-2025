@@ -8,7 +8,7 @@ public:
     Shape() {
         this->x=42;
     }
-    void speak() {
+    virtual void speak() {
         std::cout<<"I am a shape";
     }
 };
@@ -19,9 +19,14 @@ public:
     Rectangle(int y) {
         this->y=y;
     }
-    void speak(){
-        std::cout<<"I am a rectangle";
+    void speak() override{
+        std::cout<<"I am a rectangle ";
     }
 };
-
+class Triangle {
+public:
+    void speak() {
+        std::cout<<"I am a triangle ";
+    }
+};
 #endif //SEMINAR3_H
